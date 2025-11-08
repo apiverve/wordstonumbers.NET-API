@@ -4,42 +4,43 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class data
-{
-    [JsonProperty("number")]
-    public string number { get; set; }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("number")]
+        public string Number { get; set; }
 
-    [JsonProperty("words")]
-    public string words { get; set; }
+        [JsonProperty("words")]
+        public string Words { get; set; }
 
-    [JsonProperty("ordinal")]
-    public string ordinal { get; set; }
+        [JsonProperty("ordinal")]
+        public string Ordinal { get; set; }
 
-    [JsonProperty("numberOfDigits_numeric")]
-    public int numberOfDigitsnumeric { get; set; }
+        [JsonProperty("numberOfDigits_numeric")]
+        public int NumberOfDigitsnumeric { get; set; }
 
-    [JsonProperty("numberOfDigits_words")]
-    public string numberOfDigitswords { get; set; }
+        [JsonProperty("numberOfDigits_words")]
+        public string NumberOfDigitswords { get; set; }
 
-    [JsonProperty("eachNumber")]
-    public string[] eachNumber { get; set; }
+        [JsonProperty("eachNumber")]
+        public string[] EachNumber { get; set; }
 
-}
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-    [JsonProperty("error")]
-    public object error { get; set; }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
